@@ -17,6 +17,7 @@ export class AppComponent {
     setup(editor) {
       editor.ui.registry.addButton('InsertImage', {
         text: 'Insert .csv file',
+        tooltip: 'Insert file',
         icon: 'Upload',
         onAction() {
           const input = document.createElement('input');
@@ -69,11 +70,11 @@ export class AppComponent {
     },
     plugins: [
       'advlist autolink lists link image charmap print preview anchor',
-      'searchreplace visualblocks code fullscreen',
+      'searchreplace visualblocks code fullscreen hr',
       'insertdatetime media table paste code help wordcount code table'
     ],
-    toolbar: 'formatselect | bold italic | bullist numlist | blockquote align | \
-    strikethrough hr forecolor | pastetext removeformat charmap | undo redo |  \
+    toolbar: 'formatselect | bold italic | bullist numlist | blockquote alignleft alignright aligncenter | \
+    link strikethrough hr forecolor | pastetext removeformat charmap | undo redo |  \
     indent outdent | InsertImage | table | help',
   };
 }
